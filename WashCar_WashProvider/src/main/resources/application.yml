@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: AppointmentProvider
+  rabbitmq:
+    host: 118.190.132.99
+    port: 5672
+    username: zhaoyan
+    password: 123456
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_wc1906?serverTimezone=UTC
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    jpa:
+      show-sql: true
+      hibernate:
+        ddl-auto: update
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL57Dialect
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://118.190.132.99:8761/eureka/  #注册中心的地址
