@@ -19,5 +19,6 @@ public class DateUtil {
 
     public static void main(String[] args) {
         System.out.println(getTime(-7));
+        System.out.println("***************************");
     }
 }
